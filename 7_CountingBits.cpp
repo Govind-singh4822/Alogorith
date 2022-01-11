@@ -33,24 +33,28 @@ int main()
 }
 
 /*
-Let's call an array arr a mountain if the following properties hold:
+Given an integer n, return an array ans of length n + 1 such that for each i (0 <= i <= n), ans[i] is 
+the number of 1's in the binary representation of i.
 
-arr.length >= 3
-There exists some i with 0 < i < arr.length - 1 such that:
-arr[0] < arr[1] < ... arr[i-1] < arr[i]
-arr[i] > arr[i+1] > ... > arr[arr.length - 1]
-Given an integer array arr that is guaranteed to be a mountain, 
-return any i such that arr[0] < arr[1] < ... arr[i - 1] < arr[i] > arr[i + 1] > ... > arr[arr.length - 1].
+ 
+
 Example 1:
 
-Input: arr = [0,1,0]
-Output: 1
+Input: n = 2
+Output: [0,1,1]
+Explanation:
+0 --> 0
+1 --> 1
+2 --> 10
 Example 2:
 
-Input: arr = [0,2,1,0]
-Output: 1
-Example 3:
-
-Input: arr = [0,10,5,2]
-Output: 1
+Input: n = 5
+Output: [0,1,1,2,1,2]
+Explanation:
+0 --> 0
+1 --> 1
+2 --> 10
+3 --> 11
+4 --> 100
+5 --> 101
 */
